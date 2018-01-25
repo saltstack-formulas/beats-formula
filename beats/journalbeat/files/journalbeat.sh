@@ -5,5 +5,7 @@
 
 /usr/share/journalbeat/bin/journalbeat \
   -path.config /etc/journalbeat \
+  -path.home /usr/share/filebeat \
   -path.logs /var/log/journalbeat \
+  -path.data /var/lib/journalbeat \
   $@

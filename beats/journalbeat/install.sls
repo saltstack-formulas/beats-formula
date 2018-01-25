@@ -22,9 +22,23 @@ journalbeat_script:
     - mode: 0775
 
 # create dirs
-journalbeat_dirs:
+journalbeat_config_dir:
   file.directory:
     - name: /etc/journalbeat
+    - user: root
+    - group: root
+    - dir_mode: 0755
+
+journalbeat_data_dir:
+  file.directory:
+    - name: /var/lib/journalbeat
+    - user: root
+    - group: root
+    - dir_mode: 0755
+
+journalbeat_home_dir:
+  file.directory:
+    - name: /usr/share/journalbeat
     - user: root
     - group: root
     - dir_mode: 0755
