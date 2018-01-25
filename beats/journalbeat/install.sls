@@ -1,4 +1,4 @@
-{%- from "beats/maps.jinja" import journalbeat with context %}
+{%- from "beats/map.jinja" import journalbeat with context %}
 
 # Install the journalbeat binary
 journalbeat_install:
