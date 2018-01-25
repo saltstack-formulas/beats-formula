@@ -5,6 +5,7 @@ journalbeat_install:
   file.managed:
     - name: /usr/share/journalbeat/bin/journalbeat
     - source: {{ journalbeat.binary }}
+    - source_hash: {{ journalbeat.hash }}
     - user: root
     - group: root
     - mode: 0755
