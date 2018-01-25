@@ -21,6 +21,14 @@ journalbeat_script:
     - group: root
     - mode: 0775
 
+# create dirs
+journalbeat_dirs:
+  file.directory:
+    - name: /etc/journalbeat
+    - user: root
+    - group: root
+    - dir_mode: 0755
+
 # Add journalbeat systemd unit
 journalbeat_systemd:
   file.managed:
