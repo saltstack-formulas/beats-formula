@@ -1,3 +1,6 @@
+include:
+  - {{ slspath }}.config
+
 {%- from "beats/map.jinja" import journalbeat with context %}
 
 # Install the journalbeat binary
