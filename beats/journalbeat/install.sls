@@ -1,5 +1,5 @@
 include:
-  - {{ slspath }}.config
+  - beats.journalbeat.config
 
 {%- from "beats/map.jinja" import journalbeat with context %}
 
