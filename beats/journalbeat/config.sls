@@ -3,4 +3,5 @@
     file.serialize:
         - dataset_pillar: 'beats:journalbeat:config'
         - formatter: yaml
+        - makedirs: True
 {% endif %}
