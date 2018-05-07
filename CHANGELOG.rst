@@ -2,6 +2,9 @@
 beats-formula
 =============
 
+0.0.4 (2018-05-09)
+  - Added option to disable upstream repositories
+
 0.0.3 (2017-12-06)
 
  - Added Auditbeat

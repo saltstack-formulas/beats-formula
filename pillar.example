@@ -1,5 +1,6 @@
 beats:
     version: 6
+    use_upstream_repo: True
     filebeat:
         config:
             filebeat.prospectors:
