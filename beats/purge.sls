@@ -1,3 +1,4 @@
+{% set version = salt['pillar.get']('beats:version', '5') %}
 {% if salt['grains.get']('os_family') == 'Debian' %}
 
 remove_elastic_repository:
