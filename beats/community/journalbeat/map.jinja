@@ -1,0 +1,13 @@
+{% set journalbeat = salt['grains.filter_by']({
+    'Debian': {
+        'binary': 'https://github.com/mheese/journalbeat/releases/download/v5.6.0/journalbeat-debian',
+        'hash': '54dc436c873a67151aad2e8e6d9ae130'
+    },
+    'RedHat': {
+        'binary': 'https://github.com/mheese/journalbeat/releases/download/v5.6.0/journalbeat-centos',
+        'hash': '08cd6b947e3f55c6ef141cd75b9da791'
+    },
+},
+merge=salt['pillar.get']('beats.community.journalbeat', {}),
+default='default')
+%}

@@ -1,0 +1,12 @@
+[Unit]
+Description=journalbeat
+Documentation=https://github.com/mheese/journalbeat
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/share/journalbeat/bin/journalbeat -c /etc/journalbeat/journalbeat.yml -path.home /usr/share/journalbeat -path.config /etc/journalbeat -path.data /var/lib/journalbeat -path.logs /var/log/journalbeat
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
