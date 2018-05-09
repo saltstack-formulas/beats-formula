@@ -1,5 +1,5 @@
 include:
-  - beats.journalbeat.config
+  - beats.community.journalbeat.config
 
 {%- from "beats/map.jinja" import journalbeat with context %}
 
@@ -19,7 +19,7 @@ journalbeat_install:
 journalbeat_script:
   file.managed:
     - name: /usr/bin/journalbeat.sh
-    - source: salt://beats/journalbeat/files/journalbeat.sh
+    - source: salt://beats/community/journalbeat/files/journalbeat.sh
     - user: root
     - group: root
     - mode: 0775
@@ -50,7 +50,7 @@ journalbeat_home_dir:
 journalbeat_systemd:
   file.managed:
     - name: /lib/systemd/system/journalbeat.service
-    - source: salt://beats/journalbeat/files/journalbeat.service
+    - source: salt://beats/community/journalbeat/files/journalbeat.service
     - user: root
     - group: root
     - mode: 0644
