@@ -1,7 +1,7 @@
 include:
   - beats.community.journalbeat.config
 
-{%- from "beats/map.jinja" import journalbeat with context %}
+{%- from "beats/community/journalbeat/map.jinja" import journalbeat with context %}
 
 # Install the journalbeat binary
 journalbeat_install:
