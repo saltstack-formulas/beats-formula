@@ -2,11 +2,15 @@
 beats-formula
 =============
 
+0.0.4 (2018-05-09)
+
+- Added option to disable upstream repositories
+
 0.0.3 (2017-12-06)
 
- - Added Auditbeat
- - Added Packetbeat
- - Edited Service state to be enabled and to automatically restart when config files are changed
+- Added Auditbeat
+- Added Packetbeat
+- Edited Service state to be enabled and to automatically restart when config files are changed
 
 0.0.2 (2017-06-14)
 
