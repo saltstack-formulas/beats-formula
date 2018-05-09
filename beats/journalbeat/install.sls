@@ -63,7 +63,7 @@ journalbeat_enabled:
     - require:
         - file: journalbeat_install
         - file: journalbeat_systemd
-    {% if salt['pillar.get']('beats:journalbeat:config', {}) %}
+    {% if salt['pillar.get']('beats:community:journalbeat', {}) %}
     - watch:
         - file: /etc/journalbeat/journalbeat.yml
     {% endif %}
