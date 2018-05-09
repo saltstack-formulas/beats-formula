@@ -2,7 +2,7 @@
 
 remove_elastic_repository:
     pkgrepo.absent:
-        - name: deb https://artifacts.elastic.co/packages/5.x/apt stable main
+        - name: deb https://artifacts.elastic.co/packages/{{ version }}.x/apt stable main
 
 {% elif salt['grains.get']('os_family') == 'RedHat' %}
 
