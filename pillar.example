@@ -92,27 +92,28 @@ beats:
     community:
       journalbeat:
         config:
-          write_cursor_state: true
-          cursor_state_file: .journalbeat-cursor-state
-          cursor_flush_period: 5s
-          pending_queue.file: .journalbeat-pending-queue
-          pending_queue.flush_period: 1s
-          pending_queue.completed_queue_size: 8192
-          clean_field_names: true
-          convert_to_numbers: false
-          units: ["httpd.service"] # can also be ["*.service"]
-          default_type: journal
-        max_procs: 2
-        queue_size: 1000
-        name: journalbeat
-        fields_under_root: true
-        fields:
-          env: live
-        processors:
-        - drop_event:
-            when:
-              equals:
-                unit.name: "mysql.service"
-        output.logstash:
-          hosts: ["localhost:9200"]
-          logging.to_files: false
+          journalbeat:
+            write_cursor_state: true
+            cursor_state_file: .journalbeat-cursor-state
+            cursor_flush_period: 5s
+            pending_queue.file: .journalbeat-pending-queue
+            pending_queue.flush_period: 1s
+            pending_queue.completed_queue_size: 8192
+            clean_field_names: true
+            convert_to_numbers: false
+            units: ["httpd.service"] # can also be ["*.service"]
+            default_type: journal
+          max_procs: 2
+          queue_size: 1000
+          name: journalbeat
+          fields_under_root: true
+          fields:
+            env: live
+          processors:
+          - drop_event:
+              when:
+                equals:
+                  unit.name: "mysql.service"
+          output.logstash:
+            hosts: ["localhost:9200"]
+            logging.to_files: false
