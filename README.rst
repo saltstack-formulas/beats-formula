@@ -84,6 +84,20 @@ Configure auditbeat by reading from ``beats:auditbeat:config`` pillar key.
 
 Purges the environment created by ``beats.auditbeat.*`` states.
 
+``beats.community.journalbeat.install``
+----------------------------
+
+Installs the community journalbeat package and enables the relative systemd unit.
+
+``beats.community.journalbeat.config``
+---------------------------
+
+Configure journalbeat by reading from ``beats:community:journalbeat:config`` pillar key.
+
+``beats.community.journalbeat.purge``
+--------------------------
+
+Purges the environment created by ``beats.community.journalbeat.*`` states.
 
 References
 ==========
