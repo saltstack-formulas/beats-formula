@@ -91,6 +91,14 @@ beats:
             output.logstash:
               hosts: ["localhost:9200"]
             logging.to_files: false
+    journalbeat:
+      config:
+        journalbeat.inputs:
+          - paths: []
+        max_procs: 2
+        output.logstash:
+          hosts: ["localhost:9200"]
+          logging.to_files: false
     community:
       journalbeat:
         config:
