@@ -2,6 +2,10 @@
 beats-formula
 =============
 
+0.1.2 (2019-04-05)
+
+- Added Heartbeat
+
 0.1.1 (2018-07-06)
 
 - Fix `journalbeat` pillar merge

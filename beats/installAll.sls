@@ -10,3 +10,5 @@ include:
   - beats.metricbeat.config
   - beats.packetbeat.install
   - beats.packetbeat.config
+  - beats.heartbeat.install
+  - beats.heartbeat.config

@@ -22,7 +22,7 @@ Installs the Elastic repository for version 5.x packages.
 
 ``beats.installAll``
 ---------------------
-Installs Auditbeat, Packetbeat, Filebeat, Metricbeat. Adds the Configs and enables the services.
+Installs Auditbeat, Packetbeat, Filebeat, Metricbeat and Heartbeat. Adds the Configs and enables the services.
 
 ``beats.filebeat.install``
 --------------------------
@@ -83,6 +83,21 @@ Configure auditbeat by reading from ``beats:auditbeat:config`` pillar key.
 --------------------------
 
 Purges the environment created by ``beats.auditbeat.*`` states.
+
+``beats.heartbeat.install``
+----------------------------
+
+Installs the heartbeat package and enables the relative systemd unit.
+
+``beats.heartbeat.config``
+---------------------------
+
+Configure heartbeat by reading from ``beats:heartbeat:config`` pillar key.
+
+``beats.heartbeat.purge``
+--------------------------
+
+Purges the environment created by ``beats.heartbeat.*`` states.
 
 ``beats.community.journalbeat.install``
 ----------------------------
