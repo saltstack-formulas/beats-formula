@@ -92,14 +92,14 @@ beats:
               hosts: ["localhost:9200"]
             logging.to_files: false
     heartbeat:
-        config:
-            heartbeat.monitors:
-                - type: http
-                  urls: ["http://localhost:9200"]
-                    schedule: "@every 10s"
-            output.elasticsearch:
-                  hosts: ["localhost:9200"]
-            logging.to_files: false
+      config:
+        heartbeat.monitors:
+          - type: http
+            urls: ["http://localhost:9200"]
+            schedule: "@every 10s"
+        output.elasticsearch:
+          hosts: ["localhost:9200"]
+          logging.to_files: false
     community:
       journalbeat:
         config:
